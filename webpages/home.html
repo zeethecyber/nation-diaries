@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nation Diaries</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="cover hide-on-sm"></div>
+        <div class="cover hide-on-sm" ></div>
         <nav class="navbar">
             <div class="container">
                 <div class="nav-left">
@@ -43,15 +45,22 @@
         </div>
     </header>
     <!-- Header Section Ends -->
-    <main style="height: 150vh; background-color: #f0f0f0; padding: 40px;">
+    <main style="min-height: 50vh; background-color: #f0f0f0; padding: 10px;">
         <div class="container">
             <section class="trending">
-                <h2>Trending Now</h2>
+                <h3 class="trending-title">Trending Now</h3>
                 <div class="trending-section">
-                    <div class="trending-card trending-card-1">
-                        <img src="https://static.boredpanda.com/blog/wp-content/uploads/2021/05/worthless-seemed-important-technology-coverimage.jpg" alt="">
-                        <button class="badge-primary">Technology</button>
-                        <h3>Lorem ipsum dolor sit amet.</h3>
+                    <div class="trending-card trending-card-1" style="background-image: url(https://cdn.pixabay.com/photo/2020/02/01/20/05/hummingbird-hawkmoths-4811285_960_720.jpg);">
+                        <a href="#"><h3>Lorem ipsum dolor sit amet.</h3>
+                        <span class="trending-card-date">5 July 2021</span></a>
+                    </div>
+                    <div class="trending-card" style="background-image: url(https://cdn.pixabay.com/photo/2020/02/05/22/37/seagull-4822595_960_720.jpg);">
+                        <a href="#"><h3>Lorem ipsum dolor sit amet.</h3>
+                            <span class="trending-card-date">5 July 2021</span></a>
+                    </div>
+                    <div class="trending-card" style="background-image: url(https://cdn.pixabay.com/photo/2021/05/04/10/21/water-lily-6228200_960_720.jpg);">
+                        <a href="#"><h3>Lorem ipsum dolor sit amet.</h3>
+                            <span class="trending-card-date">5 July 2021</span></a>
                     </div>
                 </div>
             </section>

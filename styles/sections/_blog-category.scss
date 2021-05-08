@@ -1,5 +1,4 @@
-.trending{
-    margin-top: 30px;
+.blogCategory{
     &-title{
         border: 1px solid gray;
         padding: 5px;
@@ -9,9 +8,10 @@
     }
     &-section{
         display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-rows: repeat(2,1fr);
-        height: 440px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 450px;
+        margin-top: 30px;
         @media screen and (max-width: 900px) {
             display: block;
             height: auto;

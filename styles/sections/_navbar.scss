@@ -1,6 +1,7 @@
 header .cover{
     background: url(/assets/img/cover.jpg);
-    background-size: center;
+    background-position: center;
+    // background-size: cover;
     background-repeat:repeat;
     height: 199px;
     background-color: blue;
@@ -16,11 +17,13 @@ header .cover{
 }
 .nav{
     &-item{
-        margin: 20px;
-        font-size: 18px;
-        font-weight: 600;
+        margin: 2rem;
+        font-size: 1.8rem;
+        font-weight: 400;
+        position: relative;
         &:hover{
-            color: $color-primary;
+            color: $color-green;
+            border-bottom: 3px solid $color-green;
         }
         // color: #353535;
     }
@@ -37,17 +40,20 @@ header .cover{
 nav .container{
     display: grid;
     grid-template-columns: 3fr 1fr;
+    width: 1100px;
+    // overflow-x: auto;
 }
 
 .navbar2{
     text-align: center;
+    height: 70px;
     color: white !important;
     background-color: $color-gray;
-    padding: 10px;
-    overflow-x: auto;
+    overflow-x: scroll;
     &-items{
         width: 600px;
         margin: auto;
+        display: flex;
     }
     @media screen and (min-width:1100px) {
         display: none;
