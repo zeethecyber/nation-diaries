@@ -1,0 +1,27 @@
+.badge{
+    font-size: 13px;
+    padding: 5px 9px;
+    margin: 5px;
+    border-radius: 2px;
+    background-color: #bfbfbf;
+    border: none;
+    cursor: pointer;
+    &-primary{
+        @extend .badge;
+        background-color: $color-primary;
+        color: white;
+        &:hover{
+            background-color: #da5e38;
+        }
+        &-transparent{
+            @extend .badge-primary;
+            background-color: transparent;
+            border: 3px solid $color-primary;
+            color: $color-primary;
+            &:hover{
+                background-color: $color-primary;
+                color: white;
+            }
+        }
+    }
+}

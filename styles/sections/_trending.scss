@@ -1,0 +1,29 @@
+.trending{
+    &-section{
+        // position: relative;
+    }
+    &-card{
+        position: relative;
+        width: 500px;
+        @media screen and (max-width: 660px) {
+            width: 95%;
+        }
+        h3{
+            color: white;
+            position: absolute;
+            bottom: 15px;
+            left: 2%;
+            background-color: $color-gray;
+            padding: 5px;
+            font-size: 2vw;
+        }
+        button{
+            position: absolute;
+            bottom: 20%;
+            left: 2%;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}

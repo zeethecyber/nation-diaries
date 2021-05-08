@@ -1,0 +1,21 @@
+// Importing Base Values
+@import "./base/variables";
+@import "./base/base";
+
+// Importing Utilities
+@import "./utilities/typography";
+
+// Importing Components
+@import "./components/button";
+@import "./components/badge";
+
+// Importing Layouts
+@import "./layout/breakpoints";
+@import "./layout/layout";
+
+
+
+// Importing Sections
+@import "./sections/navbar";
+@import "./sections/footer";
+@import "./sections/trending";

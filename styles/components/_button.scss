@@ -1,0 +1,28 @@
+.btn{
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 3px;
+    background-color: #bfbfbf;
+    border: none;
+    cursor: pointer;
+    &-primary{
+        @extend .btn;
+        background-color: $color-primary;
+        color: white;
+        &:hover{
+            background-color: #da5e38;
+        }
+        &-transparent{
+            @extend .btn-primary;
+            background-color: transparent;
+            border: 3px solid $color-primary;
+            border-radius: 3px;
+            color: $color-primary;
+            &:hover{
+                background-color: $color-primary;
+                color: white;
+            }
+        }
+    }
+}
