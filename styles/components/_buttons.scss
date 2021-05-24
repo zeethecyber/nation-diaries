@@ -1,0 +1,17 @@
+.btn{
+    border: none;
+    font-size: 1.6rem;
+    padding: 0.3rem 1.8rem;
+    background-color: rgb(224, 224, 224);
+    transition: 0.2s all;
+    &:hover{
+        background-color: $color-red;
+        color: white;
+        border: gray;
+    }
+    &-transparent{
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 40px;
+    }
+}

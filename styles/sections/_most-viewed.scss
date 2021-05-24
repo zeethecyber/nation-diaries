@@ -1,0 +1,44 @@
+.most-viewed{
+    background-color: $color-dar !important;
+    color: white;
+    &-heading{
+        @extend .news-category-heading;
+    }
+    &-body{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        @media (max-width: 660px) {
+            display: block;
+        }
+    }
+    .card{
+        margin: 7.5px;
+        &-details{
+        background-color: white;
+        color: black;
+        }
+        width: 30%;
+        &-1,&-2{
+            width: 46%;
+        }
+
+        @media (max-width: 660px) {
+            display: flex;
+            width: 100%;
+            height: 200px !important;
+            flex-direction: row-reverse;
+            .card-img{
+                height: 100%;
+                width: 30%;
+            }
+            .card-details{
+                width: 70%;
+            }
+            p,h3{
+                overflow: none;
+                white-space:normal;
+            }
+        }
+    }
+}

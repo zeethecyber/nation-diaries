@@ -1,0 +1,26 @@
+.news{
+    &-category{
+        &-heading{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+            border-left: 5px solid $color-red;
+            margin-bottom: 20px;
+        }
+    }
+    &-body{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 15px;
+        justify-items: center;
+        @media screen and (max-width: 600px) {
+            display: block;
+            padding: 10px;
+            .card{
+                margin: 5px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+}

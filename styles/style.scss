@@ -1,0 +1,16 @@
+// Importing Variables
+@import "./theme/base";
+@import "./theme/variables";
+
+// Importing Components
+@import "./components/buttons";
+@import "./components/card";
+
+
+// Importing Sections
+@import "./sections/navbar";
+@import "./sections/landing";
+@import "./sections/news-category";
+@import "./sections/most-viewed";
+@import "./sections/article";
+@import "./sections/footer";

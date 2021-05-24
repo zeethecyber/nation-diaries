@@ -1,62 +1,45 @@
 .footer{
-    min-height: 450px;
-    background-color: $color-gray;
-    display: flex;
-    align-items: center;
-    padding: 30px;
-    .container{
+    min-height: 50vh;
+    background-color: $color-dar;
+    color:white;
+    &-container{
+        padding: 20px;
+        max-width: 1000px;
+        margin: auto;
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-gap: 30px;
-        color: white;
-        @media screen and (max-width: 1100px) {
-            grid-template-columns: 1fr 1fr;
-        }
-        @media screen and (max-width: 660px) {
-            // grid-template-columns: none;
-            display: block;
-        }
+        justify-items: center;
+        gap: 10px;
     }
-    &-about{
-        @media screen and (max-width: 1100px) {
-            grid-column-start: 1;
-            grid-column-end: 3;
-        }
+    &-section-heading{
+        font-size: 2.5rem;
     }
-    &-post-card{
-        img{
-            height: 60px;
-            width: auto;
-            transition: 0.2s all;
-        }
-        width: 330px;
-        height: 65px;
+    p{
+        font-size: 1.6rem;
+    }
+    &-article{
         display: flex;
-        justify-content: space-around;
-        margin-bottom: 15px;
-        &:hover{
-            h4{
-                color: $color-primary;
-            }
-            img{
-                height: 63px;
-            }
+        &-img{
+            background-position: center;
+            background-size: cover;
+            height: 80px;
+            width: 40%;
         }
-        // flex-direction: column;
     }
-    &-post-category{
+    &-social{
+        ul{
+            margin-top: 30px;
+        }
         li{
-            list-style: none;
-            border-bottom: 1px solid white;
-            margin-top: 20px;
-            padding-bottom: 10px;
+            transition: 0.3s all;
+        }
+        li:hover{
+            color: $color-red;
+            cursor: pointer;
         }
     }
-}
-.footer-credits{
-    background-color: #151515;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
+    &-copyright{
+        text-align: center;
+        background-color: rgb(39, 39, 39);
+    }
 }

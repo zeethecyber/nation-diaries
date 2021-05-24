@@ -1,61 +1,68 @@
-header .cover{
-    background: url(/assets/img/cover.jpg);
-    background-position: center;
-    // background-size: cover;
-    background-repeat:repeat;
-    height: 199px;
-    background-color: blue;
-    width: 100%;
-}
-
-.navbar,nav{
-    height: 70px;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 5px solid $color-gray;
+nav{
+    height: 60px;
+    background-color: $color-dar;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+    @media screen and (max-width: 1100px) {
+        .container{
+            max-width: 990px;
+            padding: initial 20px;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @media screen and (max-width: 600px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 .nav{
-    &-item{
-        margin: 2rem;
-        font-size: 1.8rem;
-        font-weight: 400;
-        position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-btns{
+        font-size: 1.6rem;
+        margin: 0 15px;
+        transition: 0.2s all;
         &:hover{
-            color: $color-green;
-            border-bottom: 3px solid $color-green;
+            color: $color-red;
+            cursor: pointer;
         }
-        // color: #353535;
+        &:last-child{
+            margin-right: 0;
+        }
+        @media (max-width: 800px) {
+            display: none;
+        }
     }
-    &-left{
-        display: flex;
-        align-items: center;
+    .search-btn{
+        @media screen and (max-width: 600px) {
+            display: none;
+        }
     }
-    &-right{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+    .user-profile{
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
     }
-}
-nav .container{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    width: 1100px;
-    // overflow-x: auto;
-}
-
-.navbar2{
-    text-align: center;
-    height: 70px;
-    color: white !important;
-    background-color: $color-gray;
-    overflow-x: scroll;
-    &-items{
-        width: 600px;
-        margin: auto;
-        display: flex;
-    }
-    @media screen and (min-width:1100px) {
+    .menu-icon{
+        height: 27px;
+        width: 27px;
         display: none;
+        // margin-right: 0;
+        &:hover{
+            cursor: pointer;
+        }
+        @media (max-width: 800px) {
+            display: inline-block;
+        }
     }
 }
