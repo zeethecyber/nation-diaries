@@ -137,15 +137,14 @@ input, button {
 }
 
 nav {
-  height: 60px;
+  min-height: 60px;
   background-color: #080808;
   color: white;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100vw;
   z-index: 1;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 1100px) {
@@ -202,6 +201,66 @@ nav {
   .nav-btns {
     display: none;
   }
+}
+
+.nav-search {
+  left: 0;
+  text-align: center;
+  border-top: 1px solid white;
+  padding: 20px 0;
+  position: absolute;
+  width: 100vw;
+  z-index: 2;
+  top: -100%;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -1;
+}
+
+.nav-search input[type=search] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: 1.6rem;
+  padding: 5px 3px;
+  color: white;
+}
+
+.nav-search input[type=search]:focus {
+  outline: none;
+}
+
+.nav-menu-responsive {
+  height: 100vh;
+  width: 40vw;
+  background-color: black;
+  position: fixed;
+  display: none;
+  left: -100%;
+  top: 0;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  padding: 10px;
+}
+
+@media (max-width: 800px) {
+  .nav-menu-responsive {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-menu-responsive {
+    width: 50vw;
+  }
+}
+
+.nav-menu-responsive-btns {
+  display: block;
+  margin: 5px 0;
+  border-bottom: 1px solid white;
 }
 
 @media screen and (max-width: 600px) {
