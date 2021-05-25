@@ -63,12 +63,22 @@
         }
         p{
             color: rgb(34, 34, 34);
-            // margin-left: 40px;
+            margin: 20px 0;
             text-align: justify;
         }
     }
     &-img{
-        width: 60%;
-        margin: auto;
+        height: 50vh;
+        text-align: center;
+        @media (max-width: 600px) {
+            height: auto;
+        }
+        img{
+            height: 90%;
+            @media (max-width: 600px) {
+                height: auto;
+                width: 80%;
+            }
+        }
     }
 }

@@ -494,12 +494,30 @@ nav {
 
 .article-body p {
   color: #222222;
+  margin: 20px 0;
   text-align: justify;
 }
 
 .article-img {
-  width: 60%;
-  margin: auto;
+  height: 50vh;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .article-img {
+    height: auto;
+  }
+}
+
+.article-img img {
+  height: 90%;
+}
+
+@media (max-width: 600px) {
+  .article-img img {
+    height: auto;
+    width: 80%;
+  }
 }
 
 .footer {
@@ -518,6 +536,12 @@ nav {
       grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   gap: 10px;
+}
+
+@media (max-width: 800px) {
+  .footer-container {
+    display: block;
+  }
 }
 
 .footer-section-heading {
