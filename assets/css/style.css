@@ -579,6 +579,41 @@ nav {
   }
 }
 
+.write-article {
+  margin: 100px auto;
+  max-width: 1200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  gap: 20px;
+}
+
+.sidebar {
+  border: 1px solid #cccccc;
+  padding: 20px;
+}
+
+.sidebar-title {
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.sidebar-item {
+  margin: 10px 0;
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: inherit;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.sidebar-item:focus {
+  outline: none;
+}
+
 .footer {
   min-height: 50vh;
   background-color: #080808;
