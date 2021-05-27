@@ -46,6 +46,7 @@ input, button {
   background-color: #e91802;
   color: white;
   border: gray;
+  cursor: pointer;
 }
 
 .btn-transparent {
@@ -54,12 +55,18 @@ input, button {
   border-radius: 40px;
 }
 
+.btn-blue {
+  background-color: #33658A;
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: #4076a0;
+}
+
 .card {
   width: 100%;
-  -webkit-box-shadow: 0 0 2px gray;
-          box-shadow: 0 0 2px gray;
   overflow: hidden;
-  height: 25vw;
 }
 
 .card:hover .card-img {
@@ -67,58 +74,45 @@ input, button {
           transform: scale(1.03);
 }
 
-@media (max-width: 880px) {
-  .card {
-    min-height: 270px;
-  }
-}
-
-@media (max-width: 660px) {
-  .card {
-    min-height: 230px;
-  }
-}
-
-@media (max-width: 600px) {
-  .card {
-    min-height: 300px;
-  }
-}
-
 .card-img {
-  height: 15vw;
+  max-height: 230px;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  overflow: hidden;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-@media screen and (max-width: 880px) {
-  .card-img {
-    height: 70%;
-  }
+.card-img img {
+  width: 100%;
 }
 
 .card-details {
-  padding: 10px;
-  height: 100%;
+  padding: 5px;
 }
 
 .card-details p {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  height: 3.6rem;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-@media screen and (max-width: 880px) {
+@media (max-width: 880px) {
   .card-details p {
     font-size: 1.3rem;
   }
 }
 
+@media (max-width: 400px) {
+  .card-details p {
+    display: none;
+  }
+}
+
 .card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
@@ -130,10 +124,49 @@ input, button {
 @media (max-width: 880px) {
   .card-title {
     font-size: 1.6rem;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
   }
+}
+
+.form {
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 5px gray;
+          box-shadow: 5px 5px 5px gray;
+  padding: 30px;
+  border: 1px solid #a8a8a8;
+  border-radius: 10px;
+}
+
+@media (max-width: 550px) {
+  .form {
+    width: 80%;
+  }
+}
+
+.form input:not([type="checkbox"]) {
+  display: block;
+  padding: 10px 20px;
+  border: 1px solid #a8a8a8;
+  margin: 20px 0;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.form input:not([type="checkbox"]):focus {
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .form input:not([type="checkbox"]) {
+    margin: 8px 0;
+  }
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 nav {
@@ -321,20 +354,17 @@ nav {
   display: grid;
   -ms-grid-columns: 50% 25% 25%;
       grid-template-columns: 50% 25% 25%;
-  grid-gap: 15px;
+  gap: 10px;
 }
 
 .landing-section-grid-item {
+  position: relative;
+  overflow: hidden;
   background-color: yellowgreen;
-  min-height: 230px;
-  background-size: cover;
-  background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+}
+
+.landing-section-grid-item img {
+  width: 100%;
 }
 
 .landing-section-grid-item-1 {
@@ -359,10 +389,11 @@ nav {
 }
 
 .landing-section-grid-item-details {
+  position: absolute;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
-  background: linear-gradient(to bottom, transparent, #000);
+  background: rgba(0, 0, 0, 0.6);
   padding: 10px;
+  bottom: 0;
 }
 
 @media screen and (max-width: 990px) {
@@ -407,7 +438,7 @@ nav {
 }
 
 .most-viewed {
-  background-color: #080808 !important;
+  background-color: #33658A;
   color: white;
 }
 
@@ -448,18 +479,15 @@ nav {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    height: 200px !important;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
   }
   .most-viewed .card .card-img {
+    width: 40%;
+  }
+  .most-viewed .card .card-img img {
     height: 100%;
-    width: 30%;
   }
   .most-viewed .card .card-details {
-    width: 70%;
+    width: 60%;
   }
   .most-viewed .card p, .most-viewed .card h3 {
     overflow: none;
@@ -587,6 +615,13 @@ nav {
   -ms-grid-columns: 70% 30%;
       grid-template-columns: 70% 30%;
   gap: 20px;
+  padding: 10px;
+}
+
+@media (max-width: 700px) {
+  .write-article {
+    display: block;
+  }
 }
 
 .sidebar {
@@ -612,6 +647,49 @@ nav {
 
 .sidebar-item:focus {
   outline: none;
+}
+
+.login-img {
+  width: 30vw;
+}
+
+.login-img-section {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.comment-section {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.comment-section textarea {
+  resize: none;
+  height: 20vh;
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: inherit;
+  padding: 10px 20px;
+}
+
+.comment-section button {
+  margin: 10px 0;
+}
+
+.comment-section .comment {
+  margin: 10px 0;
+}
+
+.comment-section .comment-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: green;
 }
 
 .footer {

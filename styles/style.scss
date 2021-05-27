@@ -5,7 +5,7 @@
 // Importing Components
 @import "./components/buttons";
 @import "./components/card";
-
+@import "./components/form";
 
 // Importing Sections
 @import "./sections/navbar";
@@ -14,4 +14,5 @@
 @import "./sections/most-viewed";
 @import "./sections/article";
 @import "./sections/write-article";
+@import "./sections/comment-section";
 @import "./sections/footer";

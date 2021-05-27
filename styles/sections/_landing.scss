@@ -17,8 +17,13 @@
     &-grid{
         display: grid;
         grid-template-columns: 50% 25% 25%;
-        grid-gap: 15px;
+        gap: 10px;
         &-item{
+            position: relative;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
             &-1{
                 grid-row-start: 1;
                 grid-row-end: 3;
@@ -29,19 +34,16 @@
                 }
             }
             background-color: yellowgreen;
-            min-height: 230px;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: flex-end;
             @media screen and (max-width: 990px) {
                 min-height: 200px;
             }
 
             &-details{
+                position: absolute;
                 width: 100%;
-                background:linear-gradient(to bottom, transparent,#000);
+                background: rgba($color: #000000, $alpha: 0.6);
                 padding: 10px;
+                bottom: 0;
             }
         }
         @media screen and (max-width: 990px) {
